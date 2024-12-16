@@ -27,3 +27,15 @@ class Striker(FootballPlayer):
     def play(self):
         print(f"they are trying to score goals, they have scored {self.goals} goals so far")
 
+class Midfielder(FootballPlayer):
+    def __init__(self, name, age, team, position, assists):
+        super().__init__(name, age, team, position)
+        self.assists = assists
+    
+    def make_assist(self):
+        self.assists += 1
+        print(f"{self.name} has got an assist")
+
+    def play(self):
+        print(f"controlling the midfield and they have got {self.assists} assists so far")
+
